@@ -1,0 +1,10 @@
+FROM mysql:latest
+ENV MYSQL_ROOT_PASSWORD toor
+ENV MYSQL_HOST 127.0.0.1
+ENV MYSQL_DATABASE nivel3-db-mysql
+ENV MYSQL_USER nivel3-user
+ENV MYSQL_PASSWORD nivel3
+ENV REDIS_PORT 6379
+ENV REDIS_LOCATION redis
+ADD ./init.sql /docker-entrypoint-initdb.d
+EXPOSE 3306
